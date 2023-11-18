@@ -17,13 +17,27 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema)
 
-User.create({
-    name: "amit",
-    age: 20,
-    email: "amit@gmail.com"
-})
+// User.create({
+//     name: "amit",
+//     age: 20,
+//     email: "amit@gmail.com"
+// })
+
+User.insertMany([
+    {name: "henry", age: 23, email: "henry@gmail.com"},
+    {name: "andru", age: 24, email: "andru@gmail.com"},
+    {name: "tom", age: 27, email: "tom@gmail.com"},
+])
 
 
+
+// +++++++++ Another method to add new users in the db ++++++++++ //
+
+// const user2 = new User({
+//     name: "amit",
+//     age: 20,
+//     email: "amit@gmail.com"
+// })
 
 // user2.save().then((res) =>{
 //     console.log(res)
