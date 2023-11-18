@@ -63,3 +63,16 @@ const User = mongoose.model("User", userSchema)
 // user2.save().then((res) =>{
 //     console.log(res)
 // }).catch((err)=> console.log(err))
+
+
+// ++++++++++++ updation command ++++++++++++ //
+
+// User.updateOne({name: "lokesh"}, {age: 25}).then(res=> console.log(res))
+
+// User.updateMany({age : {$lt : 23}}, {age: 30}).then(res=> console.log(res))
+
+// User.findOneAndUpdate({name: "lokesh"}, {age:45}).then(res=> console.log(res))
+
+// User.findOneAndUpdate({name: "lokesh"}, {age:45}, {new : true}).then(res=> console.log(res))
+
+// User.findByIdAndUpdate("6558a40c0c3741f75b2ef576", {name: "lucky shriwas"}, {new: true}).then(res=>console.log(res))
