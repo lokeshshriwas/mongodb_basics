@@ -17,17 +17,38 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema)
 
+// ++++++++++ find commands +++++++++++ //
+
+// User.find({}).then(res => console.log(res))
+
+// User.find({age :{$lt: 22}}).then(res=> console.log(res))
+
+// User.findOne({age :{$lt: 22}}).then(res=> console.log(res))
+
+// User.findById("6558ab4c4185952b16859a3f").then(res=> console.log(res))
+
+
+
+// ++++++++ deletion commands ++++++++++ //
+
+// User.deleteOne({_id : "6558a57c8ca8eb1984f84b2b"}).then(res=> console.log(res))
+
+
+
+
+//+++++++++++ create commands +++++++++++//
+
 // User.create({
 //     name: "amit",
 //     age: 20,
 //     email: "amit@gmail.com"
 // })
 
-User.insertMany([
-    {name: "henry", age: 23, email: "henry@gmail.com"},
-    {name: "andru", age: 24, email: "andru@gmail.com"},
-    {name: "tom", age: 27, email: "tom@gmail.com"},
-])
+// User.insertMany([
+//     {name: "henry", age: 23, email: "henry@gmail.com"},
+//     {name: "andru", age: 24, email: "andru@gmail.com"},
+//     {name: "tom", age: 27, email: "tom@gmail.com"},
+// ])
 
 
 
