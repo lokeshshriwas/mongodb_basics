@@ -9,6 +9,9 @@ async function main(){
     await mongoose.connect('mongodb://127.0.0.1:27017/amazon');
 }
 
+
+// +++++++++ defining constraints in schema +++++++++++  //
+
 const bookschema = new mongoose.Schema({
     title : {
         type: String,
@@ -33,10 +36,14 @@ const bookschema = new mongoose.Schema({
 
 const Book = mongoose.model("Book", bookschema)
 
-Book.create({
-    title: "psychology of money",
-    author: "lokesh",
-    price: 99,
-    category: "selfhelp"
-}). then(res=> console.log(res))
-.catch((err)=> console.log(err))
+// +++++++++ created data with contraints +++++++ //
+
+// Book.create({
+//     title: "psychology of money",
+//     author: "lokesh",
+//     price: 99,
+//     category: "selfhelp"
+// }). then(res=> console.log(res))
+// .catch((err)=> console.log(err))
+
+
