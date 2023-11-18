@@ -73,6 +73,6 @@ const User = mongoose.model("User", userSchema)
 
 // User.deleteOne({_id : "6558a57c8ca8eb1984f84b2b"}).then(res=> console.log(res))
 
-User.findOneAndDelete({name: "tom"}, {new : true}).then(res=> console.log(res))
+// User.findOneAndDelete({name: "tom"}, {new : true}).then(res=> console.log(res))
 
 // User.findByIdAndDelete("6558a44d715e28d150e9cfa2", {new: true}).then(res => console.log(res))
