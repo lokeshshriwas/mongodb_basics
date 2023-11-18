@@ -47,3 +47,11 @@ const Book = mongoose.model("Book", bookschema)
 // .catch((err)=> console.log(err))
 
 
+// ++++++ this will not going to follow the constraint set during schema determination +++++++ //
+
+// Book.findByIdAndUpdate("6558e0e930bc4fcfba841858", {price: -500}).then(res=> console.log(res))
+
+//  +++++++ this will follow schema constraints +++++++ //
+
+// Book.findByIdAndUpdate("6558e0e930bc4fcfba841858", {price: -400}, {runValidators : true}).then(res=> console.log(res))
+
