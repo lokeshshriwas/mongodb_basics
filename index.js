@@ -28,14 +28,6 @@ const User = mongoose.model("User", userSchema)
 // User.findById("6558ab4c4185952b16859a3f").then(res=> console.log(res))
 
 
-
-// ++++++++ deletion commands ++++++++++ //
-
-// User.deleteOne({_id : "6558a57c8ca8eb1984f84b2b"}).then(res=> console.log(res))
-
-
-
-
 //+++++++++++ create commands +++++++++++//
 
 // User.create({
@@ -76,3 +68,11 @@ const User = mongoose.model("User", userSchema)
 // User.findOneAndUpdate({name: "lokesh"}, {age:45}, {new : true}).then(res=> console.log(res))
 
 // User.findByIdAndUpdate("6558a40c0c3741f75b2ef576", {name: "lucky shriwas"}, {new: true}).then(res=>console.log(res))
+
+// +++++++ deletion commands ++++++++++ //
+
+// User.deleteOne({_id : "6558a57c8ca8eb1984f84b2b"}).then(res=> console.log(res))
+
+User.findOneAndDelete({name: "tom"}, {new : true}).then(res=> console.log(res))
+
+// User.findByIdAndDelete("6558a44d715e28d150e9cfa2", {new: true}).then(res => console.log(res))
